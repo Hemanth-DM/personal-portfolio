@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HEMANTH D.M. | 3D Interactive Portfolio | Computer Science Engineer</title>
+  
+  <!-- SEO & Meta Tags -->
+  <meta name="description" content="Official 3D Portfolio of Hemanth D.M., a motivated 3rd-year Computer Science Engineering student at Alva's Institute of Engineering & Technology. Specializing in Java, Python, C, JSP, Servlets, JDBC, and MySQL.">
+  <meta name="keywords" content="Hemanth D.M., Computer Science Engineer, Java, Python, C, JSP, Servlets, JDBC, MySQL, Alva's Institute of Engineering & Technology, Mandya, Karnataka, Portfolio, 3D Web Design">
+  <meta name="author" content="Hemanth D.M.">
+  
+  <!-- OpenGraph / Social Meta -->
+  <meta property="og:title" content="HEMANTH D.M. | 3D Interactive Portfolio">
+  <meta property="og:description" content="Computer Science Engineering student seeking entry-level internship or software development opportunity. Java, Python, C, JDBC, MySQL.">
+  <meta property="og:type" content="website">
+  
+  <!-- Favicon Icon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Three.js Library CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+
+  <!-- 3D WebGL Canvas Background -->
+  <canvas id="webgl-canvas"></canvas>
+
+  <!-- Ambient Glow Effects -->
+  <div class="ambient-glow top-left"></div>
+  <div class="ambient-glow bottom-right"></div>
+
+  <!-- =========================================================================
+       HEADER & NAVIGATION BAR
+       ========================================================================= -->
+  <header class="site-header">
+    <div class="container navbar">
+      <!-- Brand Logo -->
+      <a href="#hero" class="brand-logo" id="brand-logo">
+        <div class="brand-cube">
+          <span>H</span>
+        </div>
+        <span>HEMANTH<span class="gradient-text">.DM</span></span>
+      </a>
+
+      <!-- Navigation Links -->
+      <nav>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#objective" class="nav-link">Objective</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#certifications" class="nav-link">Certifications</a></li>
+          <li><a href="#seminar" class="nav-link">Seminar</a></li>
+          <li><a href="#interests" class="nav-link">Interests</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav Action Controls -->
+      <div class="nav-actions">
+        <!-- Audio SFX Toggle -->
+        <button class="icon-btn" id="sound-toggle-btn" title="Toggle Sound Effects" aria-label="Toggle sound">🔇</button>
+
+        <!-- Theme Switcher -->
+        <div class="theme-dropdown">
+          <button class="icon-btn" id="theme-toggle-btn" title="Select 3D Theme" aria-label="Theme Switcher">🎨</button>
+          <div class="theme-menu" id="theme-menu">
+            <button class="theme-opt-btn" data-theme="cyber">
+              <span class="color-dot dot-cyber"></span> Cyber Neon
+            </button>
+            <button class="theme-opt-btn" data-theme="matrix">
+              <span class="color-dot dot-matrix"></span> Emerald Matrix
+            </button>
+            <button class="theme-opt-btn" data-theme="solar">
+              <span class="color-dot dot-solar"></span> Solar Flare
+            </button>
+          </div>
+        </div>
+
+        <!-- View Resume CTA -->
+        <button class="btn-resume open-resume-btn" id="nav-resume-btn">
+          <span>📄</span> Resume
+        </button>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open navigation menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- =========================================================================
+         SECTION 1: HERO SECTION
+         ========================================================================= -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+        <!-- Hero Left Content -->
+        <div class="hero-content-col">
+          <div class="hero-status-pill">
+            <span class="pulse-dot"></span>
+            <span>Available for Internship & Software Development</span>
+          </div>
+
+          <h1 class="hero-name">
+            HEMANTH <span class="gradient-text">D.M.</span>
+          </h1>
+
+          <div class="hero-role-wrapper">
+            <span>&gt; </span>
+            <span class="typing-role" id="typing-role-text">Computer Science Engineering Student</span>
+          </div>
+
+          <p class="hero-description">
+            Motivated <strong>third-year Computer Science Engineering student</strong> pursuing a Bachelor of Engineering at <strong>Alva's Institute of Engineering & Technology, Mijar</strong>. Eager to apply programming fundamentals, technical skills, and problem-solving abilities to real-world software projects.
+          </p>
+
+          <!-- Contact Chips from Resume -->
+          <div class="hero-contacts-bar">
+            <a href="https://maps.google.com/?q=Mandya,+Karnataka" target="_blank" rel="noopener" class="contact-chip" title="Location">
+              <span>📍</span> Mandya, Karnataka
+            </a>
+            <a href="tel:+918431337157" class="contact-chip" title="Click to Call / Copy">
+              <span>📞</span> +91 8431337157
+            </a>
+            <a href="mailto:hemanthdm11222@gmail.com" class="contact-chip" title="Click to Email">
+              <span>✉️</span> hemanthdm11222@gmail.com
+            </a>
+            <a href="https://www.linkedin.com/in/hemanth-dm" target="_blank" rel="noopener" class="contact-chip" title="LinkedIn Profile">
+              <span>💼</span> LinkedIn: Hemanth DM
+            </a>
+            <a href="https://github.com/Hemanth-DM" target="_blank" rel="noopener" class="contact-chip" title="GitHub Profile">
+              <span>🐙</span> GitHub: Hemanth-DM
+            </a>
+          </div>
+
+          <!-- Hero Action Buttons -->
+          <div class="hero-actions">
+            <a href="#projects" class="btn-primary" id="btn-explore-projects">
+              <span>🚀</span> Explore Live Demos
+            </a>
+            <button class="btn-secondary open-resume-btn" id="btn-hero-resume">
+              <span>📄</span> View Full Resume
+            </button>
+            <a href="#contact" class="btn-secondary" id="btn-hero-contact">
+              <span>💬</span> Get In Touch
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Right: 3D Holographic Avatar Frame -->
+        <div class="hero-visual-card">
+          <div class="hero-avatar-wrapper tilt-card">
+            <!-- Floating Code Badges -->
+            <div class="float-tag tag-1">
+              <span>☕</span> Java & JDBC
+            </div>
+            <div class="float-tag tag-2">
+              <span>🐍</span> Python & Automation
+            </div>
+            <div class="float-tag tag-3">
+              <span>🐬</span> MySQL & JSP
+            </div>
+
+            <!-- Avatar Portrait Image Frame -->
+            <div class="avatar-frame">
+              <img src="assets/avatar.jpg" alt="Hemanth D.M. - Computer Science Engineer" class="avatar-img" id="hero-avatar-img">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 2: CAREER OBJECTIVE (Verbatim from Resume)
+         ========================================================================= -->
+    <section class="objective-section" id="objective">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">01 // ASPIRATION</div>
+          <h2 class="section-title">Career <span class="gradient-text">Objective</span></h2>
+          <p class="section-subtitle">A clear vision focused on engineering robust software and continuously mastering modern technologies.</p>
+        </div>
+
+        <div class="objective-card glass-panel tilt-card">
+          <div class="quote-icon">“</div>
+          <p class="objective-statement">
+            "Motivated <span class="highlight">third-year Computer Science Engineering student</span> pursuing a <span class="highlight">Bachelor of Engineering</span>, seeking an <span class="highlight">entry-level internship</span> or <span class="highlight">software development opportunity</span>. Eager to apply <span class="highlight">programming fundamentals</span>, <span class="highlight">technical skills</span>, and <span class="highlight">problem-solving abilities</span> to real-world projects while continuously improving <span class="highlight">technical and professional knowledge</span>."
+          </p>
+
+          <div class="objective-stats-grid">
+            <div class="obj-stat-box">
+              <div class="stat-icon-wrap">🎓</div>
+              <div>
+                <div class="stat-title">Current Status</div>
+                <div class="stat-value">3rd Year B.E. (CSE)</div>
+              </div>
+            </div>
+            <div class="obj-stat-box">
+              <div class="stat-icon-wrap">💻</div>
+              <div>
+                <div class="stat-title">Core Languages</div>
+                <div class="stat-value">C, Java, Python</div>
+              </div>
+            </div>
+            <div class="obj-stat-box">
+              <div class="stat-icon-wrap">⚡</div>
+              <div>
+                <div class="stat-title">Enterprise Stack</div>
+                <div class="stat-value">JSP, Servlets, JDBC, MySQL</div>
+              </div>
+            </div>
+            <div class="obj-stat-box">
+              <div class="stat-icon-wrap">🎯</div>
+              <div>
+                <div class="stat-title">Immediate Goal</div>
+                <div class="stat-value">Software Dev Internship</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 3: EDUCATION (Interactive 3D Timeline)
+         ========================================================================= -->
+    <section class="education-section" id="education">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">02 // ACADEMIC BACKGROUND</div>
+          <h2 class="section-title">Education <span class="gradient-text">Journey</span></h2>
+          <p class="section-subtitle">Chronological academic progression and technical foundations in Computer Science.</p>
+        </div>
+
+        <div class="timeline-container">
+          <div class="timeline-line"></div>
+
+          <!-- Item 1: Bachelor of Engineering -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="edu-card glass-panel tilt-card">
+              <div class="edu-header">
+                <div>
+                  <h3 class="edu-degree">Bachelor of Engineering (B.E.) – Computer Science Engineering</h3>
+                  <div class="edu-institution">🏛️ Alva's Institute of Engineering & Technology, Mijar</div>
+                </div>
+                <div class="edu-badge">2024 – Present (3rd Year)</div>
+              </div>
+              <div class="edu-meta">
+                <span class="edu-meta-item">📍 Mijar, Karnataka</span>
+                <span class="edu-meta-item">📚 Current Level: 3rd Year</span>
+                <span class="edu-meta-item">🔬 Specialization: Computer Science Engineering</span>
+              </div>
+              <ul class="edu-highlights">
+                <li>Acquiring deep mastery in Object-Oriented Programming (Java), Data Structures, and Computer Architecture.</li>
+                <li>Comprehensive study of Theory of Computation (TOC), Database Management Systems (MySQL), and Web Architectures (Servlets/JSP).</li>
+                <li>Conducting practical software engineering workflows, database normalization, and enterprise system designs.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Item 2: 12th Grade / PUC -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="edu-card glass-panel tilt-card">
+              <div class="edu-header">
+                <div>
+                  <h3 class="edu-degree">12th Grade / PUC</h3>
+                  <div class="edu-institution">🏛️ STG PU College, Mandya</div>
+                </div>
+                <div class="edu-badge">2022 – 2024</div>
+              </div>
+              <div class="edu-meta">
+                <span class="edu-meta-item">📍 Mandya, Karnataka</span>
+                <span class="edu-meta-item">📐 Focus: Science & Pre-University Studies</span>
+              </div>
+              <ul class="edu-highlights">
+                <li>Rigorous study of Mathematics, Physics, and foundational computing logic.</li>
+                <li>Cultivated core analytical and quantitative problem-solving foundations vital for engineering.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Item 3: 10th Grade / SSLC -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="edu-card glass-panel tilt-card">
+              <div class="edu-header">
+                <div>
+                  <h3 class="edu-degree">10th Grade / SSLC</h3>
+                  <div class="edu-institution">🏛️ Santhome Public School, Mandya</div>
+                </div>
+                <div class="edu-badge">Secondary Education</div>
+              </div>
+              <div class="edu-meta">
+                <span class="edu-meta-item">📍 Mandya, Karnataka</span>
+                <span class="edu-meta-item">🌟 Foundation Schooling</span>
+              </div>
+              <ul class="edu-highlights">
+                <li>Completed secondary school education with high emphasis on STEM disciplines and communication excellence.</li>
+                <li>Participated actively in science exhibitions, academic competitions, and group projects.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 4: TECHNICAL & NON-TECHNICAL SKILLS
+         ========================================================================= -->
+    <section class="skills-section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">03 // COMPETENCIES & TOOLKIT</div>
+          <h2 class="section-title">Skills & <span class="gradient-text">Expertise</span></h2>
+          <p class="section-subtitle">Directly mapped from Hemanth's technical expertise, backend architecture skills, and interpersonal competencies.</p>
+        </div>
+
+        <div class="skills-wrapper-grid">
+          <!-- Technical Skills Column -->
+          <div class="skill-category-card glass-panel tilt-card">
+            <h3 class="category-heading">
+              <span>💻</span> Technical Skills
+            </h3>
+
+            <!-- Programming Languages -->
+            <div class="skill-subgroup">
+              <div class="subgroup-title">
+                <span>//</span> Programming Languages
+              </div>
+              <div class="skills-badge-list">
+                <div class="skill-badge" data-skill="Java">
+                  <span>☕</span> Java
+                </div>
+                <div class="skill-badge" data-skill="Python">
+                  <span>🐍</span> Python
+                </div>
+                <div class="skill-badge" data-skill="C">
+                  <span>⚙️</span> C
+                </div>
+              </div>
+            </div>
+
+            <!-- Development & Database Stack -->
+            <div class="skill-subgroup">
+              <div class="subgroup-title">
+                <span>//</span> Web & Database Development
+              </div>
+              <div class="skills-badge-list">
+                <div class="skill-badge" data-skill="JSP">
+                  <span>📄</span> JSP (JavaServer Pages)
+                </div>
+                <div class="skill-badge" data-skill="Servlets">
+                  <span>🚀</span> Java Servlets
+                </div>
+                <div class="skill-badge" data-skill="JDBC">
+                  <span>🔌</span> JDBC (Java Database Connectivity)
+                </div>
+                <div class="skill-badge" data-skill="MySQL">
+                  <span>🐬</span> MySQL Database
+                </div>
+              </div>
+            </div>
+
+            <!-- Interactive Live Code Architecture Preview -->
+            <div class="code-preview-box">
+              <div class="code-tabs">
+                <button class="code-tab-btn active" data-lang="java">Java (JDBC / DAO)</button>
+                <button class="code-tab-btn" data-lang="python">Python (Text-Audio)</button>
+                <button class="code-tab-btn" data-lang="c">C (Automata Engine)</button>
+              </div>
+              <pre class="code-content-panel"><code id="code-display-panel">// ProductManagementDAO.java - Enterprise JDBC Architecture
+package com.hemanth.dao;
+
+import java.sql.*;
+import java.util.*;
+
+public class ProductDAO {
+    private static final String JDBC_URL = "jdbc:mysql://localhost:3306/inventory_db";
+    private static final String USER = "root";
+    private static final String PASS = "admin";
+
+    // Adds a new product record using JDBC PreparedStatement
+    public boolean addProduct(int id, String name, double price, int stock) {
+        String sql = "INSERT INTO products (id, name, price, stock) VALUES (?, ?, ?, ?)";
+        try (Connection con = DriverManager.getConnection(JDBC_URL, USER, PASS);
+             PreparedStatement ps = con.prepareStatement(sql)) {
+            ps.setInt(1, id);
+            ps.setString(2, name);
+            ps.setDouble(3, price);
+            ps.setInt(4, stock);
+            return ps.executeUpdate() > 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+}</code></pre>
+            </div>
+          </div>
+
+          <!-- Non-Technical Skills Column -->
+          <div class="skill-category-card glass-panel tilt-card">
+            <h3 class="category-heading">
+              <span>🤝</span> Non-Technical Skills
+            </h3>
+
+            <!-- 1. Communication and Public Speaking -->
+            <div class="soft-skill-item">
+              <div class="soft-skill-header">
+                <span class="soft-skill-name">
+                  <span>🎙️</span> Communication and Public Speaking
+                </span>
+                <span class="code-font" style="color: var(--accent-cyan); font-size: 0.85rem;">High Proficiency</span>
+              </div>
+              <p class="soft-skill-desc">
+                Demonstrated through a successful 20-minute technical seminar on Theory of Computation (TOC), effectively distilling complex automata and mathematical concepts for engineering peers.
+              </p>
+              <div class="soft-skill-bar">
+                <div class="soft-skill-progress" style="width: 95%;"></div>
+              </div>
+            </div>
+
+            <!-- 2. Teamwork and Collaboration -->
+            <div class="soft-skill-item">
+              <div class="soft-skill-header">
+                <span class="soft-skill-name">
+                  <span>👥</span> Teamwork and Collaboration
+                </span>
+                <span class="code-font" style="color: var(--accent-purple); font-size: 0.85rem;">Exceptional</span>
+              </div>
+              <p class="soft-skill-desc">
+                Thrives in collaborative lab environments and group project iterations; actively communicates design decisions, code reviews, and database schemas with peers.
+              </p>
+              <div class="soft-skill-bar">
+                <div class="soft-skill-progress" style="width: 92%;"></div>
+              </div>
+            </div>
+
+            <!-- 3. Time Management -->
+            <div class="soft-skill-item">
+              <div class="soft-skill-header">
+                <span class="soft-skill-name">
+                  <span>⏱️</span> Time Management
+                </span>
+                <span class="code-font" style="color: var(--success); font-size: 0.85rem;">Disciplined</span>
+              </div>
+              <p class="soft-skill-desc">
+                Exemplary track record of managing rigorous third-year engineering coursework concurrently with Coursera certifications, project development milestones, and seminar deliveries.
+              </p>
+              <div class="soft-skill-bar">
+                <div class="soft-skill-progress" style="width: 90%;"></div>
+              </div>
+            </div>
+
+            <!-- 3-Tier Enterprise Architecture Flow Visual -->
+            <div style="margin-top: 2rem; background: rgba(0,0,0,0.25); border: 1px dashed var(--border-glass); border-radius: 12px; padding: 1.25rem;">
+              <div style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--accent-cyan); margin-bottom: 0.5rem; text-transform: uppercase;">
+                // Full-Stack Java Architecture Pattern
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center; text-align: center; font-size: 0.78rem; font-family: var(--font-mono);">
+                <div style="background: rgba(255,255,255,0.06); padding: 0.5rem; border-radius: 6px; border: 1px solid var(--border-glass);">
+                  Client (JSP)
+                </div>
+                <span>➔</span>
+                <div style="background: rgba(255,255,255,0.06); padding: 0.5rem; border-radius: 6px; border: 1px solid var(--border-glass);">
+                  Servlet (Controller)
+                </div>
+                <span>➔</span>
+                <div style="background: rgba(255,255,255,0.06); padding: 0.5rem; border-radius: 6px; border: 1px solid var(--border-glass);">
+                  JDBC DAO
+                </div>
+                <span>➔</span>
+                <div style="background: rgba(255,255,255,0.06); padding: 0.5rem; border-radius: 6px; border: 1px solid var(--border-glass);">
+                  MySQL DB
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 5: PROJECTS (With Working Interactive Sandboxes!)
+         ========================================================================= -->
+    <section class="projects-section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">04 // SOFTWARE ENGINEERING</div>
+          <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+          <p class="section-subtitle">Real-world applications engineered by Hemanth with all keywords and working in-browser simulators.</p>
+        </div>
+
+        <div class="projects-stack">
+          <!-- PROJECT 1: Product Management System -->
+          <div class="project-card glass-panel tilt-card" id="project-pms">
+            <!-- Left Info Side -->
+            <div class="project-info-side">
+              <div class="project-tag">
+                <span>⚡</span> Enterprise Java Web App
+              </div>
+              <h3 class="project-title">Product Management System</h3>
+              
+              <!-- Verbatim Resume Bullet Points -->
+              <ul class="project-desc-list">
+                <li>
+                  <strong>Designed and developed</strong> a web-based Product Management System for managing product records efficiently.
+                </li>
+                <li>
+                  <strong>Implemented modules</strong> for adding, updating, deleting, and displaying product information (Complete CRUD lifecycle).
+                </li>
+                <li>
+                  <strong>Used JDBC and MySQL</strong> for seamless database connectivity and structured product data management.
+                </li>
+              </ul>
+
+              <!-- Technologies Used -->
+              <div class="project-tech-tags">
+                <span class="tech-pill">Java</span>
+                <span class="tech-pill">JSP</span>
+                <span class="tech-pill">Servlets</span>
+                <span class="tech-pill">JDBC</span>
+                <span class="tech-pill">MySQL</span>
+                <span class="tech-pill">Web Architecture</span>
+                <span class="tech-pill">CRUD Modules</span>
+              </div>
+            </div>
+
+            <!-- Right Interactive Sandbox Side -->
+            <div class="interactive-sandbox">
+              <div class="sandbox-topbar">
+                <div class="mac-dots">
+                  <span class="mac-red"></span>
+                  <span class="mac-yellow"></span>
+                  <span class="mac-green"></span>
+                </div>
+                <div class="sandbox-title">Product Management System (Live Simulation)</div>
+                <div class="sandbox-live-badge">🟢 Interactive</div>
+              </div>
+
+              <!-- Product Add Inputs -->
+              <div class="pms-form-grid">
+                <input type="text" id="pms-name-input" class="pms-input" placeholder="Product Name (e.g. Memory Module)">
+                <input type="text" id="pms-cat-input" class="pms-input" placeholder="Category (e.g. Hardware)">
+                <input type="number" id="pms-price-input" class="pms-input" placeholder="Price ($)" min="1">
+                <input type="number" id="pms-stock-input" class="pms-input" placeholder="Stock Qty" min="1">
+              </div>
+
+              <div class="pms-actions-row">
+                <button class="btn-pms" id="pms-add-btn">➕ Add Product (JDBC INSERT)</button>
+                <button class="btn-pms-reset" id="pms-reset-btn" title="Reset default records">↺ Reset</button>
+                <input type="text" id="pms-search-input" class="pms-input" style="flex: 1;" placeholder="🔍 Filter products...">
+              </div>
+
+              <!-- Live Product Table -->
+              <div class="pms-table-wrap">
+                <table class="pms-table">
+                  <thead>
+                    <tr>
+                      <th>ID</th>
+                      <th>Product Name</th>
+                      <th>Category</th>
+                      <th>Price</th>
+                      <th>Stock / Action</th>
+                    </tr>
+                  </thead>
+                  <tbody id="pms-table-body">
+                    <!-- Populated dynamically by JavaScript -->
+                  </tbody>
+                </table>
+              </div>
+
+              <!-- Simulated SQL/JDBC Console -->
+              <div class="sql-log-console" id="sql-log-output">
+                [JDBC: MySQL Driver initialized] SELECT * FROM products WHERE active = 1;
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJECT 2: Text-to-Audio Converter -->
+          <div class="project-card glass-panel tilt-card" id="project-tta">
+            <!-- Left Info Side -->
+            <div class="project-info-side">
+              <div class="project-tag">
+                <span>🎙️</span> Python & Audio Processing
+              </div>
+              <h3 class="project-title">Text-to-Audio Converter</h3>
+
+              <!-- Verbatim Resume Bullet Points -->
+              <ul class="project-desc-list">
+                <li>
+                  <strong>Developed an application</strong> that converts text/PDF content into audio output.
+                </li>
+                <li>
+                  <strong>Applied logical problem-solving</strong> for file processing and audio conversion workflows.
+                </li>
+                <li>
+                  Engineered automated text extraction pipelines, speech synthesis rate tuning, and seamless audio file generation.
+                </li>
+              </ul>
+
+              <!-- Technologies Used -->
+              <div class="project-tech-tags">
+                <span class="tech-pill">Python</span>
+                <span class="tech-pill">Audio Conversion</span>
+                <span class="tech-pill">PDF Processing</span>
+                <span class="tech-pill">Speech Synthesis</span>
+                <span class="tech-pill">File Workflows</span>
+                <span class="tech-pill">Problem Solving</span>
+              </div>
+            </div>
+
+            <!-- Right Interactive Sandbox Side -->
+            <div class="interactive-sandbox">
+              <div class="sandbox-topbar">
+                <div class="mac-dots">
+                  <span class="mac-red"></span>
+                  <span class="mac-yellow"></span>
+                  <span class="mac-green"></span>
+                </div>
+                <div class="sandbox-title">Text-to-Audio Converter (Live Engine)</div>
+                <div class="sandbox-live-badge">🟢 Web Speech API</div>
+              </div>
+
+              <!-- Preset Text Selectors -->
+              <div class="tta-presets">
+                <span style="font-size: 0.72rem; color: var(--text-dim); align-self: center;">Extract Preset:</span>
+                <button class="tta-preset-btn" data-preset="sample1">TOC Concepts</button>
+                <button class="tta-preset-btn" data-preset="sample2">Hemanth Bio</button>
+                <button class="tta-preset-btn" data-preset="sample3">JDBC Architecture</button>
+              </div>
+
+              <!-- Textarea for conversion -->
+              <textarea id="tta-text" class="tta-textarea" placeholder="Enter or paste text/PDF content to convert into speech audio...">Theory of Computation focuses on how efficiently problems can be solved on a model of computation, using algorithms. Key components include finite automata, formal languages, and Turing machines.</textarea>
+
+              <!-- Controls Row -->
+              <div class="tta-controls-row">
+                <button class="btn-primary" id="tta-play-btn" style="padding: 0.5rem 1.25rem; font-size: 0.85rem;">
+                  ▶ Convert & Play Audio
+                </button>
+                <button class="btn-secondary" id="tta-stop-btn" style="padding: 0.5rem 1rem; font-size: 0.85rem;">
+                  ⏹ Stop
+                </button>
+
+                <div class="tta-slider-group">
+                  <label for="tta-rate">Speed:</label>
+                  <input type="range" id="tta-rate" min="0.5" max="2" step="0.1" value="1">
+                  <span id="tta-rate-val">1.0x</span>
+                </div>
+
+                <div class="tta-slider-group">
+                  <label for="tta-pitch">Pitch:</label>
+                  <input type="range" id="tta-pitch" min="0.5" max="1.5" step="0.1" value="1">
+                  <span id="tta-pitch-val">1.0</span>
+                </div>
+              </div>
+
+              <!-- Audio Waveform Canvas Visualizer -->
+              <canvas id="audio-waveform"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 6: CERTIFICATIONS
+         ========================================================================= -->
+    <section class="certifications-section" id="certifications">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">05 // CREDENTIALS & LEARNING</div>
+          <h2 class="section-title">Professional <span class="gradient-text">Certifications</span></h2>
+          <p class="section-subtitle">Verified professional credentials earned through Coursera to strengthen software fundamentals.</p>
+        </div>
+
+        <div class="certs-grid">
+          <!-- Cert 1: Python – Coursera -->
+          <div class="cert-card glass-panel tilt-card">
+            <div class="cert-card-top">
+              <div class="cert-platform-logo">
+                <span class="coursera-blue">coursera</span>
+                <span>Certified</span>
+              </div>
+              <span class="cert-badge-verified">✓ Verified</span>
+            </div>
+
+            <div>
+              <h3 class="cert-title">Python – Coursera</h3>
+              <div class="cert-issuer">Issued by Coursera Authorized Partner</div>
+              <ul class="cert-topics">
+                <li>Core Python programming fundamentals, data structures, and algorithms.</li>
+                <li>File I/O operations, text manipulation, and automated processing workflows.</li>
+                <li>Object-Oriented Programming (OOP) principles and functional programming.</li>
+              </ul>
+            </div>
+
+            <div class="cert-footer">
+              <span class="cert-credential-id">Credential: Verified Coursera Student</span>
+              <span style="font-size: 1.25rem;">🐍</span>
+            </div>
+          </div>
+
+          <!-- Cert 2: Java – Coursera -->
+          <div class="cert-card glass-panel tilt-card">
+            <div class="cert-card-top">
+              <div class="cert-platform-logo">
+                <span class="coursera-blue">coursera</span>
+                <span>Certified</span>
+              </div>
+              <span class="cert-badge-verified">✓ Verified</span>
+            </div>
+
+            <div>
+              <h3 class="cert-title">Java – Coursera</h3>
+              <div class="cert-issuer">Issued by Coursera Authorized Partner</div>
+              <ul class="cert-topics">
+                <li>Core Java object-oriented programming (Encapsulation, Inheritance, Polymorphism).</li>
+                <li>Java Collections Framework, Exception Handling, and Multithreading principles.</li>
+                <li>Back-end application development with modular code structure.</li>
+              </ul>
+            </div>
+
+            <div class="cert-footer">
+              <span class="cert-credential-id">Credential: Verified Coursera Student</span>
+              <span style="font-size: 1.25rem;">☕</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 7: SEMINAR (Theory of Computation with Interactive FSM)
+         ========================================================================= -->
+    <section class="seminar-section" id="seminar">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">06 // ORAL DELIVERIES & RESEARCH</div>
+          <h2 class="section-title">Academic <span class="gradient-text">Seminar</span></h2>
+          <p class="section-subtitle">Delivering high-level theoretical computer science presentations to academic faculties and peers.</p>
+        </div>
+
+        <div class="seminar-card glass-panel tilt-card">
+          <!-- Left Presentation Description -->
+          <div class="seminar-info-col">
+            <div class="seminar-badge">
+              <span>🎤</span> 20-Minute Technical Seminar
+            </div>
+            <h3 class="seminar-title">Theory of Computation (TOC)</h3>
+            
+            <p class="seminar-quote">
+              "<strong>Presented a 20-minute seminar covering fundamental concepts and principles of Theory of Computation.</strong>"
+            </p>
+
+            <div class="seminar-topics-list">
+              <div class="toc-pill">
+                <span>🔄</span> Finite Automata (DFA & NFA)
+              </div>
+              <div class="toc-pill">
+                <span>🔤</span> Regular Expressions & Languages
+              </div>
+              <div class="toc-pill">
+                <span>🌳</span> Context-Free Grammars (CFG)
+              </div>
+              <div class="toc-pill">
+                <span>⚙️</span> Turing Machines & Decidability
+              </div>
+            </div>
+
+            <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;">
+              Demonstrated strong communication, pedagogical clarity, and public speaking by breaking down abstract mathematical automata models into understandable algorithmic diagrams.
+            </p>
+          </div>
+
+          <!-- Right Interactive Automata Visualizer -->
+          <div class="fsm-visualizer-box">
+            <div style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent-cyan); font-weight: 700; margin-bottom: 0.5rem;">
+              Finite Automata (DFA) Simulator
+            </div>
+            <div style="font-size: 0.78rem; color: var(--text-dim); margin-bottom: 1rem;">
+              DFA accepts strings with substring '01'
+            </div>
+
+            <!-- FSM Nodes Diagram -->
+            <div class="fsm-nodes-container">
+              <div class="fsm-state-node active-state" id="fsm-q0">
+                <span>q₀</span>
+              </div>
+              <div class="fsm-arrow">➔ 0 ➔</div>
+              <div class="fsm-state-node" id="fsm-q1">
+                <span>q₁</span>
+              </div>
+              <div class="fsm-arrow">➔ 1 ➔</div>
+              <div class="fsm-state-node accept-state" id="fsm-q2">
+                <span>q₂★</span>
+              </div>
+            </div>
+
+            <!-- Interactive FSM Testing Controls -->
+            <div class="fsm-controls-row">
+              <input type="text" id="fsm-binary-input" class="fsm-input" value="10101" maxlength="8" placeholder="Binary string (e.g. 01)">
+              <button class="btn-pms" id="fsm-run-btn">Run Automata</button>
+            </div>
+
+            <div class="fsm-status-output" id="fsm-status-output">
+              Click 'Run Automata' to trace state transitions!
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 8: LANGUAGES & INTERESTS
+         ========================================================================= -->
+    <section class="languages-interests-section" id="interests">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">07 // DOMAINS & COMMUNICATION</div>
+          <h2 class="section-title">Languages & <span class="gradient-text">Interests</span></h2>
+          <p class="section-subtitle">Multilingual capabilities and passionate engineering interests from Hemanth's profile.</p>
+        </div>
+
+        <div class="lang-interests-grid">
+          <!-- Languages Box -->
+          <div class="lang-box glass-panel tilt-card">
+            <h3 class="category-heading">
+              <span>🗣️</span> Spoken Languages
+            </h3>
+            <div class="lang-cards-list">
+              <div class="lang-card-item">
+                <div>
+                  <div class="lang-name">Kannada</div>
+                  <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.2rem;">Native Language • Fluent in speech, reading, and writing</div>
+                </div>
+                <div class="lang-level">Native / Fluent</div>
+              </div>
+
+              <div class="lang-card-item">
+                <div>
+                  <div class="lang-name">English</div>
+                  <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.2rem;">Professional Working Proficiency • Technical Seminar Presenter</div>
+                </div>
+                <div class="lang-level">Professional</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interests Box -->
+          <div class="interests-box glass-panel tilt-card">
+            <h3 class="category-heading">
+              <span>💡</span> Core Interests
+            </h3>
+            <div class="interests-grid">
+              <!-- Interest 1: Artificial Intelligence -->
+              <div class="interest-card">
+                <div class="interest-icon">🧠</div>
+                <div class="interest-name">Artificial Intelligence</div>
+                <div class="interest-desc">
+                  Exploring intelligent algorithms, machine learning models, and modern automated agents.
+                </div>
+              </div>
+
+              <!-- Interest 2: Technology and Software Development -->
+              <div class="interest-card">
+                <div class="interest-icon">💻</div>
+                <div class="interest-name">Technology and Software Development</div>
+                <div class="interest-desc">
+                  Building full-stack Java solutions, database pipelines, and high-performance applications.
+                </div>
+              </div>
+
+              <!-- Interest 3: Problem Solving -->
+              <div class="interest-card">
+                <div class="interest-icon">🧩</div>
+                <div class="interest-name">Problem Solving</div>
+                <div class="interest-desc">
+                  Analytical algorithmic problem solving, computational complexity, and logic optimization.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 9: CONTACT & CONNECT
+         ========================================================================= -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">08 // LET'S CONNECT</div>
+          <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+          <p class="section-subtitle">Reach out for internship opportunities, project collaborations, or developer roles.</p>
+        </div>
+
+        <div class="contact-layout-grid">
+          <!-- Contact Detail Cards -->
+          <div class="contact-info-cards">
+            <!-- Phone -->
+            <a href="tel:+918431337157" class="contact-detail-card glass-panel tilt-card">
+              <div class="detail-icon">📞</div>
+              <div>
+                <div class="detail-label">Phone & WhatsApp</div>
+                <div class="detail-value">+91 8431337157</div>
+              </div>
+            </a>
+
+            <!-- Email -->
+            <a href="mailto:hemanthdm11222@gmail.com" class="contact-detail-card glass-panel tilt-card">
+              <div class="detail-icon">✉️</div>
+              <div>
+                <div class="detail-label">Official Email</div>
+                <div class="detail-value">hemanthdm11222@gmail.com</div>
+              </div>
+            </a>
+
+            <!-- Location -->
+            <div class="contact-detail-card glass-panel tilt-card">
+              <div class="detail-icon">📍</div>
+              <div>
+                <div class="detail-label">Location</div>
+                <div class="detail-value">Mandya, Karnataka, India</div>
+              </div>
+            </div>
+
+            <!-- Social Links -->
+            <div style="display: flex; gap: 1rem; margin-top: 0.5rem;">
+              <a href="https://www.linkedin.com/in/hemanth-dm" target="_blank" rel="noopener" class="btn-secondary" style="flex: 1; justify-content: center;">
+                <span>💼</span> LinkedIn: Hemanth DM
+              </a>
+              <a href="https://github.com/Hemanth-DM" target="_blank" rel="noopener" class="btn-secondary" style="flex: 1; justify-content: center;">
+                <span>🐙</span> GitHub: Hemanth-DM
+              </a>
+            </div>
+          </div>
+
+          <!-- Interactive Message Form -->
+          <div class="contact-form-panel glass-panel tilt-card">
+            <h3 class="form-title">Send a Direct Message</h3>
+            <form id="contact-form" class="contact-form">
+              <div class="form-group">
+                <label for="cf-name" class="form-label">Your Name *</label>
+                <input type="text" id="cf-name" class="form-input" placeholder="e.g. Hiring Manager / Recruiter" required>
+              </div>
+
+              <div class="form-group">
+                <label for="cf-email" class="form-label">Your Email *</label>
+                <input type="email" id="cf-email" class="form-input" placeholder="name@company.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="cf-subject" class="form-label">Subject</label>
+                <input type="text" id="cf-subject" class="form-input" placeholder="Internship Offer / Technical Opportunity">
+              </div>
+
+              <div class="form-group">
+                <label for="cf-message" class="form-label">Your Message *</label>
+                <textarea id="cf-message" class="form-textarea" placeholder="Hi Hemanth, we reviewed your portfolio and would like to discuss an opportunity..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn-primary" style="align-self: flex-start; margin-top: 0.5rem;">
+                <span>✉️</span> Send Message to Hemanth
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       FOOTER
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <div class="footer-copy">
+          &copy; 2026 <strong>HEMANTH D.M.</strong> All rights reserved.
+        </div>
+        <div class="footer-institution">
+          Computer Science Engineering • Alva's Institute of Engineering & Technology, Mijar
+        </div>
+      </div>
+
+      <div class="footer-right">
+        <!-- Live Mandya IST Clock -->
+        <div class="ist-clock-pill">
+          <span>🕒</span> <span id="ist-clock">Mandya: Loading...</span>
+        </div>
+        
+        <a href="#hero" class="icon-btn" title="Back to Top" aria-label="Back to top">↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       RESUME PREVIEW & PRINT MODAL
+       ========================================================================= -->
+  <div class="modal-overlay" id="resume-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title-text">
+    <div class="modal-container">
+      <div class="modal-header">
+        <div class="modal-title" id="modal-title-text">
+          <span>📄</span> Official Resume Document - Hemanth D.M.
+        </div>
+        <div class="modal-actions">
+          <button class="btn-primary" id="print-resume-btn" style="padding: 0.4rem 0.9rem; font-size: 0.8rem;">
+            🖨️ Print / Save PDF
+          </button>
+          <button class="btn-secondary" id="copy-resume-btn" style="padding: 0.4rem 0.9rem; font-size: 0.8rem;">
+            📋 Copy Text
+          </button>
+          <button class="modal-close-btn" id="close-resume-btn" aria-label="Close modal">✕</button>
+        </div>
+      </div>
+
+      <div class="modal-body">
+        <div class="resume-doc-sheet">
+          <h1>HEMANTH D.M.</h1>
+          <div class="resume-doc-contacts">
+            Mandya, Karnataka | +91 8431337157 | hemanthdm11222@gmail.com | LinkedIn: Hemanth DM | GitHub: Hemanth-DM
+          </div>
+
+          <div class="resume-doc-sec-title">CAREER OBJECTIVE</div>
+          <p class="resume-doc-p">
+            Motivated third-year Computer Science Engineering student pursuing a Bachelor of Engineering, seeking an entry-level internship or software development opportunity. Eager to apply programming fundamentals, technical skills, and problem-solving abilities to real-world projects while continuously improving technical and professional knowledge.
+          </p>
+
+          <div class="resume-doc-sec-title">EDUCATION</div>
+          <div class="resume-doc-item">
+            <div class="resume-doc-row">
+              <span>Bachelor of Engineering (B.E.) – Computer Science Engineering</span>
+              <span>2024 – Present</span>
+            </div>
+            <div class="resume-doc-sub">Alva's Institute of Engineering & Technology, Mijar</div>
+            <div class="resume-doc-sub">3rd Year</div>
+          </div>
+
+          <div class="resume-doc-item">
+            <div class="resume-doc-row">
+              <span>12th Grade / PUC</span>
+              <span>2022 – 2024</span>
+            </div>
+            <div class="resume-doc-sub">STG PU College, Mandya</div>
+          </div>
+
+          <div class="resume-doc-item">
+            <div class="resume-doc-row">
+              <span>10th Grade / SSLC</span>
+              <span></span>
+            </div>
+            <div class="resume-doc-sub">Santhome Public School, Mandya</div>
+          </div>
+
+          <div class="resume-doc-sec-title">TECHNICAL SKILLS</div>
+          <div class="resume-doc-p">
+            • <strong>Programming Languages:</strong> C, Java, Python<br>
+            • <strong>Development:</strong> JSP, Servlets, JDBC, MySQL
+          </div>
+
+          <div class="resume-doc-sec-title">NON-TECHNICAL SKILLS</div>
+          <div class="resume-doc-p">
+            • Communication and Public Speaking<br>
+            • Teamwork and Collaboration<br>
+            • Time Management
+          </div>
+
+          <div class="resume-doc-sec-title">PROJECTS</div>
+          <div class="resume-doc-item">
+            <div class="resume-doc-row">
+              <span>Product Management System</span>
+            </div>
+            <ul class="resume-doc-list">
+              <li>Designed and developed a web-based Product Management System for managing product records efficiently.</li>
+              <li>Implemented modules for adding, updating, deleting, and displaying product information.</li>
+              <li>Used JDBC and MySQL for database connectivity and product data management.</li>
+            </ul>
+          </div>
+
+          <div class="resume-doc-item">
+            <div class="resume-doc-row">
+              <span>Text-to-Audio Converter</span>
+            </div>
+            <ul class="resume-doc-list">
+              <li>Developed an application that converts text/PDF content into audio output.</li>
+              <li>Applied logical problem-solving for file processing and audio conversion workflows.</li>
+            </ul>
+          </div>
+
+          <div class="resume-doc-sec-title">CERTIFICATIONS</div>
+          <div class="resume-doc-p">
+            • Python – Coursera<br>
+            • Java – Coursera
+          </div>
+
+          <div class="resume-doc-sec-title">SEMINAR</div>
+          <div class="resume-doc-item">
+            <div class="resume-doc-row">
+              <span>Theory of Computation (TOC)</span>
+            </div>
+            <ul class="resume-doc-list">
+              <li>Presented a 20-minute seminar covering fundamental concepts and principles of Theory of Computation.</li>
+            </ul>
+          </div>
+
+          <div class="resume-doc-sec-title">LANGUAGES</div>
+          <div class="resume-doc-p">
+            Kannada | English
+          </div>
+
+          <div class="resume-doc-sec-title">INTERESTS</div>
+          <div class="resume-doc-p">
+            Artificial Intelligence | Technology and Software Development | Problem Solving
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/three-scene.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
